@@ -93,7 +93,7 @@ async def incoming_message_f(client, message):
             await i_m_sefg.edit_text(err_message)
     else:
         await i_m_sefg.edit_text(
-            "**FCUK**! wat have you entered. \nPlease read /help \n"
+            "You Had Entered Wrong Way\nFor Downloading On Telegram,\nYou Can Use Following Command But All Command Should as Reply To Direct Download Link or Magnet Link 🧲 or .torrent File. \n● Download\n/leech - To Download File On Telegram.\n\n● Download With Compression\n<code>/leech archive<code/> - To Get Single Compressed File (Max Size:- 1.95GB).\n\n● Download With Decompression\n<code>/leech unzip<code/> - To Extract Files From .zip File.\n<code>/leech unrar<code/> - To Extract Files From .rar File.\n<code>/leech untar<code/> - To Extract Files From .tar File. \n"
             f"<b>API Error</b>: {cf_name}"
         )
 #
@@ -148,7 +148,7 @@ async def incoming_gdrive_message_f(client, message):
         )
     else:
         await i_m_sefg.edit_text(
-            "**FCUK**! wat have you entered. \nPlease read /help \n"
+            "You Had Entered Wrong Way\nFor Uploading On G-Drive,\nYou Can Use Following Command But All Command Should as Reply To Direct Download Link or Magnet Link 🧲 or .torrent File. \n● Upload\n/gleech - To Download File On Telegram.\n\n● Upload With Compression\n<code>/gleech archive<code/> - To Get Single Compressed File (Max Size:- 1.95GB).\n\n● Upload With Decompression\n<code>/gleech unzip<code/> - To Extract Files From .zip File.\n<code>/gleech unrar<code/> - To Extract Files From .rar File.\n<code>/gleech untar<code/> - To Extract Files From .tar File. \n"
             f"<b>API Error</b>: {cf_name}"
         )
 
