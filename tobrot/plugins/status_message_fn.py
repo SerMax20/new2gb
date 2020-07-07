@@ -34,8 +34,8 @@ async def status_message_f(client, message):
         # Show All Downloads
         downloads = aria_i_p.get_downloads()
         #
-        DOWNLOAD_ICON = "📥"
-        UPLOAD_ICON = "📤"
+        DOWNLOAD_ICON = "⬇️"
+        UPLOAD_ICON = "⬆️"
         #
         msg = ""
         for download in downloads:
@@ -52,7 +52,7 @@ async def status_message_f(client, message):
             e_t_a = str(download.eta_string())
             current_gid = str(download.gid)
             #
-            msg += f"<u>{downloading_dir_name}</u>"
+            msg += f"<code>{downloading_dir_name}<code>"
             msg += "\n"
             msg += f"{total_length_size}"
             msg += " | "
@@ -65,19 +65,19 @@ async def status_message_f(client, message):
             msg += f"{e_t_a}"
             msg += " | "
             msg += f"{download_current_status}"
-            msg += "/n"
+            msg += "\n"
             msg += f"<code>/cancel {current_gid}</code>"
             msg += "\n\n"
         LOGGER.info(msg)
         if msg == "":
-            msg = "No Active, Queued or Paused TORRENTs"
+            msg = "No Active, Queued or Paused Processes. \n Thank You.."
         await message.reply_text(msg, quote=True)
 
 
 async def cancel_message_f(client, message):
     if len(message.command) > 1:
         # /cancel command
-        i_m_s_e_g = await message.reply_text("checking..?", quote=True)
+        i_m_s_e_g = await message.reply_text("Wait Checking.. ?", quote=True)
         aria_i_p = await aria_start()
         g_id = message.command[1].strip()
         LOGGER.info(g_id)
@@ -86,7 +86,7 @@ async def cancel_message_f(client, message):
             LOGGER.info(downloads)
             LOGGER.info(downloads.remove(force=True))
             await i_m_s_e_g.edit_text(
-                "Leech Cancelled"
+                "Leech Cancelled Sucessfully."
             )
         except Exception as e:
             await i_m_s_e_g.edit_text(
