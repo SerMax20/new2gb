@@ -53,25 +53,24 @@ async def status_message_f(client, message):
             current_gid = str(download.gid)
             #
             msg += f"<u>{downloading_dir_name}</u>"
-            msg += " | "
+            msg += "\n"
             msg += f"{total_length_size}"
             msg += " | "
             msg += f"{progress_percent_string}"
-            msg += " | "
+            msg += "\n"
             msg += f"{DOWNLOAD_ICON} {down_speed_string}"
             msg += " | "
             msg += f"{UPLOAD_ICON} {up_speed_string}"
-            msg += " | "
+            msg += "\n"
             msg += f"{e_t_a}"
             msg += " | "
             msg += f"{download_current_status}"
-            msg += " | "
+            msg += "/n"
             msg += f"<code>/cancel {current_gid}</code>"
-            msg += " | "
             msg += "\n\n"
         LOGGER.info(msg)
         if msg == "":
-            msg = "🤷‍♂️ No Active, Queued or Paused TORRENTs"
+            msg = "No Active, Queued or Paused TORRENTs"
         await message.reply_text(msg, quote=True)
 
 
