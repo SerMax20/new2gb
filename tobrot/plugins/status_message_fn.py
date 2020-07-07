@@ -70,7 +70,7 @@ async def status_message_f(client, message):
             msg += "\n\n"
         LOGGER.info(msg)
         if msg == "":
-            msg = "No Active, Queued or Paused Processes. \n Thank You.."
+            msg = "No Active, Queued or Paused Processes."
         await message.reply_text(msg, quote=True)
 
 
