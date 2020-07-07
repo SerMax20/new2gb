@@ -41,7 +41,7 @@ async def incoming_purge_message_f(client, message):
     await i_m_sefg2.delete()
 
 async def incoming_message_f(client, message):
-    """/leechcommand"""
+    """/leech command"""
     i_m_sefg = await message.reply_text("processing", quote=True)
     is_zip = False
     is_unzip = False
@@ -98,7 +98,7 @@ async def incoming_message_f(client, message):
         )
 #
 async def incoming_gdrive_message_f(client, message):
-    """/gleechcommand"""
+    """/gleech command"""
     i_m_sefg = await message.reply_text("processing", quote=True)
     is_zip = False
     is_unzip = False
@@ -154,7 +154,7 @@ async def incoming_gdrive_message_f(client, message):
 
 
 async def incoming_youtube_dl_f(client, message):
-    """ /ytdlcommand """
+    """ /ytdl command """
     i_m_sefg = await message.reply_text("processing", quote=True)
     # LOGGER.info(message)
     # extract link from message
