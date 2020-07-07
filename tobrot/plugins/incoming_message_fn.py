@@ -198,6 +198,6 @@ async def incoming_youtube_dl_f(client, message):
             )
     else:
         await i_m_sefg.edit_text(
-            "You Entered Wrong Way\n Use Following Command To Download or Upload Video From Streaming Site.\n**But Command Should Be as Reply To Video Link.** Playlists Link Not Supported.\n● For Download On Telegram Use/stream\n● For Uploading On G-Drive Use <code>/stream gdrive<code/>\n\nYouTube And Hotstar Link Works Fabulously. \n"
-            f"<b>API Error</b>: {cf_name}"
+            "You Entered Wrong Way\n Use Following Command To Download or Upload Video From Streaming Site.\n**But Command Should Be as Reply To Video Link.** Playlists Link Not Supported.\n\n● For Download On Telegram Use/stream\n● For Uploading On G-Drive Use <code>/stream gdrive<code/>\n\nYouTube And Hotstar Link Works Fabulously. \n"
+            f"<b>API Error</b>: {cf_name}"a
         )
